@@ -1,15 +1,7 @@
 .preview-card {
   background-color: var(--white);
   border-radius: 8px;
-
-  .image-wrapper {
-    /*background-image: url("./assets/image-product-mobile.jpg");
-    height: 240px;
-    background-repeat: no-repeat;
-    background-size: contain;*/
-    //border-top-right-radius: 8px;
-    //border-top-left-radius: 8px;
-  }
+  overflow: hidden;
 
   .info-wrapper {
     padding: 1.25rem;
@@ -70,9 +62,17 @@
     border-radius: 8px;
     cursor: pointer;
 
-    &:before {
-      content: url("./assets/icon-cart.svg");
-      padding-right: 10px;
+    &::before {
+      content: "";
+      display: inline-block;
+      background-image: url("./assets/icon-cart.svg");
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 16px;
+    }
+
+    &:hover {
+      background-color: var(--darkCyanHover);
     }
   }
 }
