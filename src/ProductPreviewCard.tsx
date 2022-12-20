@@ -5,7 +5,7 @@ import imageProductDesktop from './assets/image-product-desktop.jpg'
 
 function ProductPreviewCard({product}: { product: IProduct }) {
     return (
-        <article className={'preview-card'}>
+        <article className={'preview-card'} role="main">
             <picture className={'image-wrapper'}>
                 <source srcSet={imageProductDesktop} media="(min-width: 600px)" />
                 <img src={imageProductMobile} alt={product.name}/>
