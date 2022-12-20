@@ -2,6 +2,7 @@
   background-color: var(--white);
   border-radius: 8px;
   overflow: hidden;
+  max-width: 600px;
 
   .info-wrapper {
     padding: 1.25rem;
@@ -9,7 +10,7 @@
 
   .type {
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     color: var(--darkGrayBlue);
     padding-bottom: 0.75rem;
     font-size: 0.75rem;
@@ -73,6 +74,19 @@
 
     &:hover {
       background-color: var(--darkCyanHover);
+    }
+  }
+}
+
+@media screen and (min-width: 600px){
+  .preview-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .info-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 }
